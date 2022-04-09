@@ -1,12 +1,12 @@
 <template>
   <v-footer padless>
     <v-container>
-      <v-row justify="space-between">
+      <v-row justify="center" justify-sm="space-between">
         <v-col cols="auto">
           <span class="info--text">&copy;</span>
           {{ new Date().getFullYear() }}
           <strong>{{ $t("application.name") }}</strong>
-          <small>
+          <small class="px-1">
             Made with
             <v-icon
               class="animate__animated animate__infinite animate__heartBeat"
@@ -17,13 +17,23 @@
           </small>
         </v-col>
         <v-col cols="auto"
-          ><router-link class="white--text mr-3  text-link" to="/impressum">
+          ><router-link class="white--text mr-3 text-link" to="/impressum">
             impressum
           </router-link>
           <router-link class="white--text text-link" to="/privacy">
             privacy
-          </router-link></v-col
-        >
+          </router-link>
+
+          <v-btn
+            class="white--text accent"
+            target="_blank"
+            x-small
+            href="https://github.com/NikosChou/choustoulakis"
+          >
+            <strong>source</strong>
+            <v-icon right x-small>fab fa-github</v-icon>
+          </v-btn>
+        </v-col>
       </v-row>
     </v-container>
   </v-footer>
