@@ -3,7 +3,7 @@
     <v-row justify="center">
       <v-col cols="12" class="d-flex justify-center">
         <v-avatar size="15rem" class="elevation-10 img-avtr">
-          <v-img src="/static/nikos.jpg" position="down"></v-img>
+          <v-img :src="post.image" position="down"></v-img>
         </v-avatar>
       </v-col>
       <v-col
@@ -12,9 +12,7 @@
         data-aos="fade-right"
         data-aos-anchor-placement="top"
       >
-        <h1 class="text-center">
-          Hi! Ich bin Niko -
-        </h1>
+        <h1 class="text-center">{{ post.title.split("-")[0] }} -</h1>
       </v-col>
       <v-col
         cols="12"
@@ -22,7 +20,7 @@
         data-aos="fade-left"
         data-aos-anchor-placement="top"
       >
-        <h2 class="text-center">Software Ingenieur</h2>
+        <h2 class="text-center">{{ post.title.split("-")[1] }}</h2>
       </v-col>
       <v-col cols="7">
         <hr />
@@ -35,11 +33,7 @@
         data-aos="fade-in"
         data-aos-anchor-placement="top"
       >
-        <p class="text-center rounded pa-5">
-          Ich bin einen Full Stack Entwickler in den Bereichen Web und
-          Anwendungsentwicklung. Clean-Code, Test-driven Development
-          Microservices in Container und Cloud Umgebungen mit SpringBoot und
-          REST. Weitere details können Sie in mein Lebenslauf finden.
+        <p class="text-center rounded pa-5" v-html="post.body">
         </p>
       </v-col>
       <v-col
@@ -48,7 +42,7 @@
         data-aos="fade-in"
         data-aos-anchor-placement="top"
       >
-        <v-btn large to="/cv" color="accent">Lebenslauf</v-btn>
+        <v-btn large to="/cv" color="accent" v-text="post.action"></v-btn>
       </v-col>
     </v-row>
     <v-row class="shape-fill">
@@ -64,13 +58,16 @@
 </template>
 <script>
 export default {
+  props: {
+    post: {},
+  },
   data() {
     return {
       avatarSize: 200,
       oldScroll: null,
-      lastScroll: null
+      lastScroll: null,
     };
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>

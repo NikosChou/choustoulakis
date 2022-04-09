@@ -1,21 +1,19 @@
 <template>
   <v-container fluid>
     <v-container>
-      <BasicInfo class="pa-3" />
+      <BasicInfo :infos="infos" :social="social" class="pa-3" />
       <v-divider
         class="primary"
         data-aos="fade-up"
         data-aos-anchor-placement="top"
       ></v-divider>
-      <Summary class="pa-3" />
-      <!-- <v-divider class="primary"></v-divider>
-      <Interests /> -->
+      <Summary :summary="summary" class="pa-3" />
       <v-divider
         class="primary"
         data-aos="fade-up"
         data-aos-anchor-placement="top"
       ></v-divider>
-      <WorkExperience class="pa-3" :jobs="jobs[$i18n.locale]" />
+      <WorkExperience class="pa-3" :jobs="jobs" />
       <v-divider
         class="primary"
         data-aos="fade-up"
@@ -57,26 +55,34 @@ export default {
     WorkExperience,
     Education,
     Skills,
-    Languages
+    Languages,
   },
   created() {
-    this.refreshJobs();
     this.refreshLanguages();
-    this.refreshSkills();
+    this.refreshProfileInfo();
   },
   computed: {
     ...mapState({
-      jobs: state => state.jobs,
-      languages: state => state.languages,
-      skills: state => state.skills
-    })
+      jobs: (state) => state.jobs,
+      languages: (state) => state.languages,
+      skills: (state) => state.skills,
+      infos: (state) => state.infos,
+      social: (state) => state.social,
+      summary: (state) => state.summary,
+    }),
   },
   methods: {
-    ...mapActions(["refreshJobs", "refreshLanguages", "refreshSkills"])
+    ...mapActions([
+      "refreshJobs",
+      "refreshLanguages",
+      "refreshSkills",
+      "refreshProfileInfo",
+      "refreshProfileSummary",
+    ]),
   },
   data: () => ({
     //
-  })
+  }),
 };
 </script>
 <style lang="scss">
