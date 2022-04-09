@@ -31,7 +31,7 @@
             href="https://github.com/NikosChou/choustoulakis"
           >
             <strong>source</strong>
-            <v-icon right x-small>fab fa-github</v-icon>
+            <v-icon right x-small>fab fa-github</v-icon> 
           </v-btn>
         </v-col>
       </v-row>
