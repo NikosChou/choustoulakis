@@ -61,42 +61,42 @@
             "title": "Software Engineer",
             "description": "<div>\n  <div>\n    Beim Ista Projekt in Essen handelt es sich um eine Webanwendung f&uuml;r Heizkostenabrechung usw. Entwicklung mit Microfrontend Architektur in BE Entwicklung Java Microservices mit  Spring Boot. Erstellung von CI/CD pipelines. Entwerfen von Rest Schnittstellen, Verwendung von Krakend als API Gateway. Verwalten kubernetes pods deployments, services usw.\n  </div>\n</div>\n",
             "company": "ISTA (Festanstellung)",
-            "time": "from Nov..2020",
+            "time": "from November.2020",
             "points": "Angular, Java, Javascript, Microservices, Angular 11, kubernetes, postgresql, Gitlab, ci-cd, Microfrontend, KrakenD, JMS, Active-MQ"
         },
         {
             "title": "Fullstack developer",
             "description": "<div>\n  <div>\n    Beim P&amp;C Projekt in D&uuml;sseldorf handelt es sich um eine in CRM Plattform. Im Frontend kommen React zum Einsatz. Die komplexen Transaktion(Events) prozesse werden &uuml;ber Event Sourcing Technologien bearbeitet. F&uuml;r die einzelnen Prozessschritte werden Scala mit Akka Framework zur Verf&uuml;gung gestellt. Die Kommunikation zwischen den jeweiligen Schichten erfolgt &uuml;ber REST aufrufe.\n  </div>\n</div>\n",
             "company": "P&C (Festanstellung)",
-            "time": "Juni.2019 - Mai.2022",
+            "time": "Mai.2022 - Juni.2019",
             "points": "Scala, Akka, kubernetes, Microservices, wavefront, postgresql, Amazon Web Services, ElasticSearch, Mongodb"
         },
         {
             "title": "Senior Software Entwickler",
             "description": "<div>\n  <div>\n    Beim Toyota Kreditbank Projekt handelt es sich um eine Java-Swing Application f&uuml;r die Mitarbeiter des Bank. Umsetzung von Designanforderungen Anbindung von stored Procedures Erstellen von SQL-Abfragen\n  </div>\n</div>\n",
             "company": "Toyota Kreditbank (Externe)",
-            "time": "Mai.2018 - Feb..2018",
+            "time": "Februar.2018 - Mai.2018",
             "points": "Java, Java-Swing, jquery, Oracle, spring, GIT"
         },
         {
             "title": "Software Entwickler",
             "description": "<div>\n  <div>\n    Entwicklung von ein JIRA Time tracking Plugin. Erstellung und Anbindung von REST Schnittstellen Abholung und Verarbeitung von CSV Dateien und Erstellung von Periodischen JIRA Services im Bereich JIRA. Plugin Erstellung von Datenstrukturen und Tabellen in PostgreSQL-9.4 Datenbanken. Erstellung HTML Seiten und Email Templates (insb. Closure- und Velocity- Templates)\n  </div>\n</div>\n",
             "company": "Brainbits (Externe)",
-            "time": "Feb..2018 - Dez..2017",
+            "time": "Dezember.2017 - Februar.2018",
             "points": "Java, atlassian sdk, jquery, velocity, closure, postgresql, html, css, js"
         },
         {
             "title": "Junior Java Entwickler",
             "description": "<div>\n  <div>\n    Aufnahme der fachlichen Anforderungen.Implementierung und Entwicklung(Inkl Oberfl&auml;chen) Buildmanagement.Erstellung von Datenstrukturen, Datenbanktabellen und Datenmigrationswerkzeugen(Flyway), inklusive Oracle 12DB, Elasticsearch.Erstellung und Anbindung von Rest, Spring Remoting Schnittstellen.Erweiterung der Anbindung externer Dienstleister.\n  </div>\n</div>\n",
             "company": "Check24 (Festanstellung)",
-            "time": "Okt..2017 - Mai.2015",
+            "time": "Mai.2015 - Oktober.2017",
             "points": "jee, Java8, spring4, oracle, velocity, html, js, git, oracle, rest, sql, groovy, hibernate, elasticsearch, design patterns"
         },
         {
             "title": "Praktikant Java/JEE-Entwickler",
             "description": "<div>\n  <div>\n    Agile Entwicklung und Konzeptioniertung eines Crm Verwaltungstools f&uuml;r das Erasmus Plus Mobility for Placements.Implementierung und Entwicklung Java BE, Java FE(Java server faces)\n  </div>\n</div>\n",
             "company": "Treelogics Software Services GmbH (Praktikant)",
-            "time": "März.2015 - Juli.2014",
+            "time": "Juli.2014 - März.2015",
             "points": "java, jpa, jsf, oracle, websocket, maven, subversion, ecliipse, gwt, agile"
         }
     ],
