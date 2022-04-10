@@ -26,6 +26,10 @@ const router = new Router({
     {
       path: "/privacy",
       component: Privacy
+    },
+    {
+      path: "*",
+      component: PageNotFound
     }
   ],
   scrollBehavior() {

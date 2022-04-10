@@ -3,7 +3,7 @@ import axios from 'axios';
 export default {
   refreshProfileInfo({ commit }) {
     return axios
-      .get('/static/api/posts/profile')
+      .get('/static/api/posts/profile.json')
       .then(({ data }) => {
         commit('updateProfileInfos', data);
         commit('updateProfileSocial', data);
