@@ -6,14 +6,8 @@
     }}</template>
     <template v-slot:right>
       <v-card shaped>
-        <v-card-title v-html="$t('application.summary.text.title')">
-        </v-card-title>
-        <v-card-text class="info--text">
-          <p v-html="$t('application.summary.text.0')"></p>
-          <p v-html="$t('application.summary.text.1')"></p>
-          <p v-html="$t('application.summary.text.2')"></p>
-          <p v-html="$t('application.summary.text.3')"></p>
-        </v-card-text>
+        <v-card-title v-html="summary.title"> </v-card-title>
+        <v-card-text class="info--text" v-html="summary.body"> </v-card-text>
       </v-card>
     </template>
   </BasicRow>
@@ -22,6 +16,9 @@
 <script>
 import BasicRow from "@/components/cv/BasicRow";
 export default {
-  components: { BasicRow }
+  components: { BasicRow },
+  props: {
+    summary: {},
+  },
 };
 </script>

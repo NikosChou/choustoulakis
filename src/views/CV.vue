@@ -1,27 +1,25 @@
 <template>
   <v-container fluid>
     <v-container>
-      <BasicInfo class="pa-3" />
+      <BasicInfo :infos="infos" :social="social" class="pa-3" />
       <v-divider
         class="primary"
         data-aos="fade-up"
         data-aos-anchor-placement="top"
       ></v-divider>
-      <Summary class="pa-3" />
-      <!-- <v-divider class="primary"></v-divider>
-      <Interests /> -->
+      <Summary :summary="summary" class="pa-3" />
       <v-divider
         class="primary"
         data-aos="fade-up"
         data-aos-anchor-placement="top"
       ></v-divider>
-      <WorkExperience class="pa-3" :jobs="jobs[$i18n.locale]" />
+      <WorkExperience class="pa-3" :jobs="jobs" />
       <v-divider
         class="primary"
         data-aos="fade-up"
         data-aos-anchor-placement="top"
       ></v-divider>
-      <Education class="pa-3" />
+      <Education :items="educations" class="pa-3" />
       <v-divider
         class="primary"
         data-aos="fade-up"
@@ -33,7 +31,7 @@
         data-aos="fade-up"
         data-aos-anchor-placement="top"
       ></v-divider>
-      <Languages class="pa-3" :languages="languages[$i18n.locale]" />
+      <Languages class="pa-3" :languages="languages" />
     </v-container>
   </v-container>
 </template>
@@ -57,28 +55,28 @@ export default {
     WorkExperience,
     Education,
     Skills,
-    Languages
+    Languages,
   },
   created() {
-    this.refreshJobs();
-    this.refreshLanguages();
-    this.refreshSkills();
+    this.refreshProfileInfo();
   },
   computed: {
     ...mapState({
-      jobs: state => state.jobs,
-      languages: state => state.languages,
-      skills: state => state.skills
-    })
+      jobs: (state) => state.jobs,
+      languages: (state) => state.languages,
+      skills: (state) => state.skills,
+      infos: (state) => state.infos,
+      social: (state) => state.social,
+      summary: (state) => state.summary,
+      educations: (state) => state.educations,
+    }),
   },
   methods: {
-    ...mapActions(["refreshJobs", "refreshLanguages", "refreshSkills"])
+    ...mapActions(["refreshProfileInfo"]),
   },
-  data: () => ({
-    //
-  })
 };
 </script>
+
 <style lang="scss">
 @import "node_modules/animate.css/animate";
 @import "node_modules/aos/dist/aos";

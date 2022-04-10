@@ -21,8 +21,7 @@
         >
         <v-card-subtitle class="primary--text">{{ job.time }}</v-card-subtitle>
         <v-card-text class="info--text job-description">
-          {{ job.description }}
-          <br />
+          <div v-html="job.description"></div>
           <br />
           <div>
             <v-chip
