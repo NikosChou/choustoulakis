@@ -26,13 +26,6 @@ const router = new Router({
     {
       path: "/privacy",
       component: Privacy
-    },
-    {
-      path: "/static"
-    },
-    {
-      path: "*",
-      component: PageNotFound
     }
   ],
   scrollBehavior() {
