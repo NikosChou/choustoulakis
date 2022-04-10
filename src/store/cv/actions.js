@@ -1,14 +1,6 @@
 import axios from 'axios';
 
 export default {
-  refreshLanguages({ commit }) {
-    return axios
-      .get('/static/languages.json')
-      .then(({ data }) => {
-        commit('updateLanguages', data);
-        return data;
-      });
-  },
   refreshProfileInfo({ commit }) {
     return axios
       .get('/static/api/posts/profile')
@@ -18,6 +10,8 @@ export default {
         commit('updateProfileSummary', data);
         commit('updateJobs', data);
         commit('updateSkills', data);
+        commit('updateLanguages', data);
+        commit('updateEducations', data)
         return data;
       });
   }

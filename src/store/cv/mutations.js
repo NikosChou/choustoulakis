@@ -1,22 +1,6 @@
 export default {
-  updateBlogPosts: (state, blogPosts) => {
-    state.blogPosts = [...blogPosts];
-  },
-  updateEducation: (state, education) => {
-    state.education = [...education];
-  },
-  updateInterests: (state, interests) => {
-    state.interests = [...interests];
-  },
-  updatePersonalInfo: (state, personalInfo) => {
-    state.personalInfo = personalInfo;
-  },
-  updateResume: (state, resume) => {
-    state.resume = resume;
-  },
-  //
-  updateLanguages: (state, languages) => {
-    state.languages = languages;
+  updateLanguages: (state, data) => {
+    state.languages = data.languages;
   },
   updateProfileInfos: (state, data) => {
     state.infos = data.infos
@@ -32,5 +16,8 @@ export default {
   },
   updateJobs: (state, data) => {
     state.jobs = data.workExperiences;
+  },
+  updateEducations: (state, data) => {
+    state.educations = data.educations;
   },
 };

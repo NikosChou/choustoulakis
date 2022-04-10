@@ -13,5 +13,8 @@ export default {
   },
   summary: (state, getters) => {
     return getters.summary;
+  },
+  languages: (state, getters) => {
+    return getters.languages;
   }
 }

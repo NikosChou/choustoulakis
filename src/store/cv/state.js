@@ -4,5 +4,6 @@ export default {
   languages: [],
   infos: [],
   social: [],
-  summary: {}
+  summary: {},
+  educations: []
 };

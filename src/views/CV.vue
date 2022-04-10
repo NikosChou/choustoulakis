@@ -19,7 +19,7 @@
         data-aos="fade-up"
         data-aos-anchor-placement="top"
       ></v-divider>
-      <Education class="pa-3" />
+      <Education :items="educations" class="pa-3" />
       <v-divider
         class="primary"
         data-aos="fade-up"
@@ -31,7 +31,7 @@
         data-aos="fade-up"
         data-aos-anchor-placement="top"
       ></v-divider>
-      <Languages class="pa-3" :languages="languages[$i18n.locale]" />
+      <Languages class="pa-3" :languages="languages" />
     </v-container>
   </v-container>
 </template>
@@ -58,7 +58,6 @@ export default {
     Languages,
   },
   created() {
-    this.refreshLanguages();
     this.refreshProfileInfo();
   },
   computed: {
@@ -69,22 +68,15 @@ export default {
       infos: (state) => state.infos,
       social: (state) => state.social,
       summary: (state) => state.summary,
+      educations: (state) => state.educations,
     }),
   },
   methods: {
-    ...mapActions([
-      "refreshJobs",
-      "refreshLanguages",
-      "refreshSkills",
-      "refreshProfileInfo",
-      "refreshProfileSummary",
-    ]),
+    ...mapActions(["refreshProfileInfo"]),
   },
-  data: () => ({
-    //
-  }),
 };
 </script>
+
 <style lang="scss">
 @import "node_modules/animate.css/animate";
 @import "node_modules/aos/dist/aos";

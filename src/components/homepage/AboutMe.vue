@@ -1,13 +1,13 @@
 <template>
   <v-container class="full-page fill-height">
-    <v-row justify="center" align="center">
+    <v-row v-if="post" justify="center" align="center">
       <v-col cols="12" class="d-flex justify-center text--center"
         ><h2 data-aos="fade-up" data-aos-anchor-placement="top" v-text="post.title">
         </h2></v-col
       >
       <v-col cols="12" style="height: 10rem"></v-col>
       <v-col cols="12" md="6" class="d-flex justify-center"
-        ><v-img max-height="40vh" contain :src="post.image"></v-img
+        ><v-img v-if="post.image" max-height="40vh" contain :src="post.image"></v-img
       ></v-col>
       <v-col cols="12" md="6" sm="8">
         <br />
@@ -24,7 +24,7 @@
 <script>
 export default {
   props: {
-    post: {},
+    post: null,
   },
 };
 </script>

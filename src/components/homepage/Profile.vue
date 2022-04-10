@@ -1,6 +1,6 @@
 <template>
   <v-container fluid class="full-page fill-height">
-    <v-row justify="center">
+    <v-row v-if="post" justify="center">
       <v-col cols="12" class="d-flex justify-center">
         <v-avatar size="15rem" class="elevation-10 img-avtr">
           <v-img :src="post.image" position="down"></v-img>
@@ -59,7 +59,7 @@
 <script>
 export default {
   props: {
-    post: {},
+    post: null,
   },
   data() {
     return {
