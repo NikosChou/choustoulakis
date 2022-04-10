@@ -28,6 +28,9 @@ const router = new Router({
       component: Privacy
     },
     {
+      path: "/static"
+    },
+    {
       path: "*",
       component: PageNotFound
     }
