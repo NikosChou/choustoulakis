@@ -25,3 +25,22 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm ci
     - run: npm run build --if-present
+  dockerize:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+      - name: Login to Amazon ECR
+        run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/h7v4k5t3
+      - name: build image
+        run: docker build . -t choustoulakis-website
+      - name: tag image
+        run: docker tag choustoulakis-website:latest public.ecr.aws/h7v4k5t3/choustoulakis-website:$(git rev-parse --short "$GITHUB_SHA")
+      - name: push to ecr
+        run: docker push public.ecr.aws/h7v4k5t3/choustoulakis-website:$(git rev-parse --short "$GITHUB_SHA")
