@@ -1,1 +1,18 @@
-{"data":[{"title":"Hi! Ich bin Niko - SOFTWARE INGENIEUR","body":"<div>\n  <div>\n    Ich bin einen Full Stack Entwickler in den Bereichen Web und Anwendungsentwicklung. Clean-Code, Test-driven Development Microservices in Container und Cloud Umgebungen mit SpringBoot und REST. Weitere details k&ouml;nnen Sie in mein Lebenslauf finden.\n  </div>\n</div>\n","image":"//images.ctfassets.net/w66g3oko737j/2Z1MTZ8lmjB3isiWAtAIzR/8152286be6cc4e9a324d7825fe0192af/nikos.jpg","action":"Lebenslauf","reference":"homepage-1"},{"title":"ÜBER MICH","body":"<div>\n  <div>\n    Hallo!. Ich hei&szlig;e&nbsp;\n    <i>Nikolaos Choustoulakis</i>\n    . Seit&nbsp;\n    <b>2014</b>\n    &nbsp;arbeite ich in Deutschland als&nbsp;\n    <b>Softwareingenieur</b>\n    .\n    Ich habe in&nbsp;\n    <a href=\"https://ece.hmu.gr/en/home/\">\n      Hellenic Mediterranean University in Griechenland&nbsp;\n      <b>Electrical &amp; Computer Engineering</b>\n      &nbsp;studiert\n    </a>\n  </div>\n  <div>\n    Meine Schwerpunkte sind&nbsp;\n    <b>Java</b>\n    ,&nbsp;\n    <b>Scala</b>\n    ,&nbsp;\n    <b>VueJs</b>\n    ,&nbsp;\n    <b>Angular</b>\n    ,&nbsp;\n    <b>Spring</b>\n    ,&nbsp;\n    <b>Microservice</b>\n    ,&nbsp;\n    <b>Kubernetes</b>\n    ,&nbsp;\n    <b>Docker</b>\n    ,&nbsp;\n    <b>RESTful Webservices</b>\n    ,&nbsp;\n    <b>JPA</b>\n    . Ich programmiere in JVM mit&nbsp;\n    <b>Scala</b>\n    &nbsp;&amp;&nbsp;\n    <b>Java</b>\n    . F&uuml;r FE benutze ich&nbsp;\n    <b>VueJs</b>\n    .\n  </div>\n</div>\n","image":"//images.ctfassets.net/w66g3oko737j/5qUnlhx8ZIWPolLvDjku6S/2390f3576bc934230d6f3425fe539d47/undraw_profile_6l1l.svg","action":"Kontakt","reference":"homepage-2"}]}
+{
+    "data": [
+        {
+            "title": "Hi! Ich bin Niko - SOFTWARE INGENIEUR",
+            "body": "<div>\n  <div>\n    Ich bin einen Full Stack Entwickler in den Bereichen Web und Anwendungsentwicklung. Clean-Code, Test-driven Development Microservices in Container und Cloud Umgebungen mit SpringBoot und REST. Weitere details k&ouml;nnen Sie in mein Lebenslauf finden.\n  </div>\n</div>\n",
+            "image": "//images.ctfassets.net/w66g3oko737j/2Z1MTZ8lmjB3isiWAtAIzR/8152286be6cc4e9a324d7825fe0192af/nikos.jpg",
+            "action": "Lebenslauf",
+            "reference": "homepage-1"
+        },
+        {
+            "title": "ÜBER MICH",
+            "body": "<div>\n  <div>\n    Hallo!. Ich hei&szlig;e&nbsp;\n    <i>Nikolaos Choustoulakis</i>\n    . Seit&nbsp;\n    <b>2014</b>\n    &nbsp;arbeite ich in Deutschland als&nbsp;\n    <b>Softwareingenieur</b>\n    .\n    Ich habe in&nbsp;\n    <a href=\"https://ece.hmu.gr/en/home/\">\n      Hellenic Mediterranean University in Griechenland&nbsp;\n      <b>Electrical &amp; Computer Engineering</b>\n      &nbsp;studiert\n    </a>\n  </div>\n  <div>\n    Meine Schwerpunkte sind&nbsp;\n    <b>Java</b>\n    ,&nbsp;\n    <b>Scala</b>\n    ,&nbsp;\n    <b>VueJs</b>\n    ,&nbsp;\n    <b>Angular</b>\n    ,&nbsp;\n    <b>Spring</b>\n    ,&nbsp;\n    <b>Microservice</b>\n    ,&nbsp;\n    <b>Kubernetes</b>\n    ,&nbsp;\n    <b>Docker</b>\n    ,&nbsp;\n    <b>RESTful Webservices</b>\n    ,&nbsp;\n    <b>JPA</b>\n    . Ich programmiere in JVM mit&nbsp;\n    <b>Scala</b>\n    &nbsp;&amp;&nbsp;\n    <b>Java</b>\n    . F&uuml;r FE benutze ich&nbsp;\n    <b>VueJs</b>\n    .\n  </div>\n</div>\n",
+            "image": "//images.ctfassets.net/w66g3oko737j/5qUnlhx8ZIWPolLvDjku6S/2390f3576bc934230d6f3425fe539d47/undraw_profile_6l1l.svg",
+            "action": "Kontakt",
+            "reference": "homepage-2"
+        }
+    ]
+}
