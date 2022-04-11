@@ -3,7 +3,18 @@
     <v-row v-if="post" justify="center">
       <v-col cols="12" class="d-flex justify-center">
         <v-avatar size="15rem" class="elevation-10 img-avtr">
-          <v-img :src="post.image" position="down"></v-img>
+          <v-img :src="post.image" position="down"> </v-img>
+
+          <svg viewBox="0 0 500 500" class="curved-text">
+            <path
+              id="curve"
+              d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
+              fill="transparent"
+            />
+            <text width="500">
+              <textPath xlink:href="#curve" class="text">#OPENTOWORK</textPath>
+            </text>
+          </svg>
         </v-avatar>
       </v-col>
       <v-col
@@ -33,8 +44,7 @@
         data-aos="fade-in"
         data-aos-anchor-placement="top"
       >
-        <p class="text-center rounded pa-5" v-html="post.body">
-        </p>
+        <p class="text-center rounded pa-5" v-html="post.body"></p>
       </v-col>
       <v-col
         cols="12"
@@ -71,6 +81,14 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.curved-text {
+  position: absolute;
+  font-size: 3em;
+  .text {
+    fill: var(--v-primary-base);
+    font-weight: 900;
+  }
+}
 .full-page {
   height: 100vh;
   position: relative;

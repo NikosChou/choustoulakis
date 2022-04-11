@@ -4,7 +4,6 @@ import VueGtag from "vue-gtag";
 export default {
   accept: (state, accepted) => {
     state.accepted = accepted;
-    console.log("setting")
     localStorage.setItem('cookies_accepted', accepted);
     if (accepted === true) {
       Vue.use(VueGtag, {
