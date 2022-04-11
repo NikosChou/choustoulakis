@@ -21,6 +21,9 @@ import Appbar from "@/components/Appbar";
 import Footer from "@/components/Footer";
 import PrivacyPolicy from "@/components/PrivacyPolicy";
 import aos from "aos";
+import { createNamespacedHelpers } from "vuex";
+
+const { mapActions } = createNamespacedHelpers("cookies");
 
 export default {
   name: "App",
@@ -28,6 +31,7 @@ export default {
     this.$vuetify.theme.themes.dark = true;
   },
   created() {
+    this.refreshCookiesAnswer();
     aos.init({ duration: 1000 });
   },
   components: {
@@ -58,6 +62,9 @@ export default {
           return "14px";
       }
     }
+  },
+  methods: {
+    ...mapActions(["refreshCookiesAnswer"]),
   }
 };
 </script>

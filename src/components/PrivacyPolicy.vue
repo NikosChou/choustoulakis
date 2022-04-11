@@ -23,16 +23,6 @@
         ><v-btn elevation="0" color="primary" @click="accept(true)"
           >Accept</v-btn
         ></v-col
-      >
-      <v-col class="pt-4 text-end" v-if="false"
-        ><v-btn
-          elevation="0"
-          color="info"
-          class="primary--text"
-          text
-          @click="accept(false)"
-          >Deny</v-btn
-        ></v-col
       ></v-row
     >
   </v-container>

@@ -4,8 +4,12 @@ import VueGtag from "vue-gtag";
 export default {
   accept: (state, accepted) => {
     state.accepted = accepted;
-    Vue.use(VueGtag, {
-      config: { id: "G-78WG4R0RQM" }
-    });
+    console.log("setting")
+    localStorage.setItem('cookies_accepted', accepted);
+    if (accepted === true) {
+      Vue.use(VueGtag, {
+        config: { id: "G-78WG4R0RQM" }
+      });
+    }
   }
 };
