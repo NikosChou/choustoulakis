@@ -2,20 +2,25 @@
   <v-container class="full-page fill-height">
     <v-row v-if="post" justify="center" align="center">
       <v-col cols="12" class="d-flex justify-center text--center"
-        ><h2 data-aos="fade-up" data-aos-anchor-placement="top" v-text="post.title">
-        </h2></v-col
-      >
+        ><h2
+          data-aos="fade-up"
+          data-aos-anchor-placement="top"
+          v-text="post.title"
+        ></h2>
+      </v-col>
       <v-col cols="12" style="height: 10rem"></v-col>
       <v-col cols="12" md="6" class="d-flex justify-center"
-        ><v-img v-if="post.image" max-height="40vh" contain :src="post.image"></v-img
-      ></v-col>
+        ><v-img v-if="post.image" max-height="40vh" contain :src="post.image">
+        </v-img>
+      </v-col>
       <v-col cols="12" md="6" sm="8">
-        <br />
-        <div v-html="post.body">
-        </div>
-        <div class="text-center">
-          <v-btn large to="/cv" class="button" v-text="post.action"></v-btn>
-        </div>
+        <div v-html="post.body"></div>
+        <v-row justify="center" class="mt-10">
+          <v-col cols="auto">
+            <v-btn large to="/cv" class="button" v-text="post.action">
+            </v-btn>
+          </v-col>
+        </v-row>
       </v-col>
     </v-row>
   </v-container>
