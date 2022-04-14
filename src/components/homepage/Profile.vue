@@ -92,7 +92,7 @@ export default {
 .full-page {
   height: 100vh;
   position: relative;
-  background-image: url("/IMG_9082-Pano.jpg");
+  background-image: url("~@/assets/IMG_9082-Pano.jpg");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
