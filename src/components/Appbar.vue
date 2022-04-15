@@ -69,7 +69,7 @@ export default {
       return {
         duration: 300,
         offset: 0,
-        easing: "easeInOutCubic"
+        easing: "easeInOutCubic",
       };
     },
     items() {
@@ -77,7 +77,7 @@ export default {
         {
           name: "Home",
           icon: "fas fa-home",
-          route: "/"
+          route: "/",
         },
         {
           name: "Lebenslauf",
@@ -87,49 +87,52 @@ export default {
             {
               title: this.$t("application.navigation.cv.item.basicInfo"),
               id: "#BasicInfo",
-              icon: "fab fa-old-republic"
+              icon: "fab fa-old-republic",
             },
             {
               title: this.$t("application.navigation.cv.item.summary"),
               id: "#Summary",
-              icon: "fas fa-archive"
+              icon: "fas fa-archive",
             },
             {
               title: this.$t("application.navigation.cv.item.experience"),
               id: "#Workexperience",
-              icon: "fas fa-brain"
+              icon: "fas fa-brain",
             },
             {
               title: this.$t("application.navigation.cv.item.education"),
               id: "#Education",
-              icon: "fas fa-university"
+              icon: "fas fa-university",
             },
             {
               title: this.$t("application.navigation.cv.item.skills"),
               id: "#Skills",
-              icon: "fas fa-palette"
+              icon: "fas fa-palette",
             },
             {
               title: this.$t("application.navigation.cv.item.languages"),
               id: "#Languages",
-              icon: "fas fa-language"
-            }
-          ]
-        }
+              icon: "fas fa-language",
+            },
+          ],
+        },
       ];
-    }
+    },
   },
   data() {
     return {
       drawer: false,
-      permanent: false
+      permanent: false,
     };
   },
   methods: {
+    setDrawer(val) {
+      this.drawer = val;
+    },
     goto(item) {
       this.$vuetify.goTo(item.id, this.options);
-    }
-  }
+    },
+  },
 };
 </script>
 
