@@ -12,7 +12,7 @@
         <v-col cols="12" class="d-flex justify-center">
           <v-btn
             link
-            href="/static/CV_Nikolaos_Choustoulakis.pdf"
+            href="/api/static/choustoulakis_cv.pdf"
             download
             outlined
             color="primary"
