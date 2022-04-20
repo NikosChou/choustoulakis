@@ -11,7 +11,7 @@
       <Footer />
     </template>
     <template v-slot:privacy>
-      <PrivacyPolicy data-aos="fade-up" />
+      <PrivacyPolicy data-aos="fade-up" data-aos-delay="1000" />
     </template>
   </Appbar>
 </template>
@@ -37,7 +37,7 @@ export default {
   components: {
     Appbar,
     Footer,
-    PrivacyPolicy
+    PrivacyPolicy,
   },
   computed: {
     changeFontSize() {
@@ -61,11 +61,11 @@ export default {
         default:
           return "14px";
       }
-    }
+    },
   },
   methods: {
     ...mapActions(["refreshCookiesAnswer"]),
-  }
+  },
 };
 </script>
 <style lang="scss">
@@ -73,6 +73,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("../node_modules/@fortawesome/fontawesome-free/css/solid.min.css");
 
 * {
   font-display: block;
@@ -99,7 +100,7 @@ a.text-link {
     opacity: 0;
     position: absolute;
     transform: translateX(-10px);
-    font-family: "Font Awesome 5 Free";
+    font-family: "Font Awesome 6 Free";
     font-weight: 900;
     transition: 1.2s;
   }

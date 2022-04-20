@@ -16,16 +16,15 @@
             >
           </small>
         </v-col>
-        <v-col cols="auto"
-          ><router-link class="white--text mr-3 text-link" to="/impressum">
+        <v-col cols="auto" class="">
+          <router-link class="white--text mr-3 text-link" to="/impressum">
             impressum
           </router-link>
           <router-link class="white--text text-link" to="/privacy">
             privacy
           </router-link>
-
           <v-btn
-            class="white--text accent"
+            class="white--text accent ml-4"
             target="_blank"
             x-small
             href="https://github.com/NikosChou/choustoulakis"
