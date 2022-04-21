@@ -12,8 +12,9 @@
               class="animate__animated animate__infinite animate__heartBeat"
               small
               color="accent"
-              >fas fa-heart</v-icon
             >
+              fas fa-heart
+            </v-icon>
           </small>
         </v-col>
         <v-col cols="auto" class="">

@@ -7,7 +7,7 @@ export default new Vuetify({
   theme: {
     dark: true,
     options: {
-      customProperties: true
+      customProperties: true,
     },
     themes: {
       light: {
@@ -18,7 +18,7 @@ export default new Vuetify({
         error: "#e91e63",
         warning: "#cddc39",
         info: "#453936",
-        success: "#4caf50"
+        success: "#4caf50",
       },
       dark: {
         primary: "#3ABEFF",
@@ -28,8 +28,8 @@ export default new Vuetify({
         accent: "#D84797",
         error: "#e91e63",
         warning: "#cddc39",
-        success: "#4caf50"
-      }
-    }
-  }
+        success: "#4caf50",
+      },
+    },
+  },
 });

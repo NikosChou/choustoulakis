@@ -45,8 +45,8 @@ import BasicRow from "@/components/cv/BasicRow";
 export default {
   components: { BasicRow },
   props: {
-    jobs: null
-  }
+    jobs: null,
+  },
 };
 </script>
 

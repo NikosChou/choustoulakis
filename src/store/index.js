@@ -6,6 +6,6 @@ export default {
   modules: {
     homepage,
     cv,
-    cookies
-  }
+    cookies,
+  },
 };

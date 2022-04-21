@@ -13,31 +13,31 @@ const router = new Router({
   routes: [
     {
       path: "/",
-      component: HomePage
+      component: HomePage,
     },
     {
       path: "/cv",
-      component: CV
+      component: CV,
     },
     {
       path: "/impressum",
-      component: Impressum
+      component: Impressum,
     },
     {
       path: "/privacy",
-      component: Privacy
+      component: Privacy,
     },
     {
       path: "*",
-      component: PageNotFound
-    }
+      component: PageNotFound,
+    },
   ],
   scrollBehavior() {
-    return new Promise(resolve => {
+    return new Promise((resolve) => {
       setTimeout(() => {
         resolve({ x: 0, y: 0, behavior: "smooth" });
       }, 1000);
     });
-  }
+  },
 });
 export default router;

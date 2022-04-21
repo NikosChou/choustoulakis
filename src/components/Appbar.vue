@@ -63,7 +63,6 @@
 
 <script>
 export default {
-  components: {},
   computed: {
     options() {
       return {

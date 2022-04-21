@@ -26,6 +26,6 @@ import Progress from "@/components/cv/Progress";
 
 export default {
   components: { BasicRow, Progress },
-  props: { languages: null }
+  props: { languages: null },
 };
 </script>

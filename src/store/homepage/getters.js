@@ -1,5 +1,5 @@
 export default {
-    homepagePosts: state => {
-      return state.homepagePosts;
-    },
-  }
+  homepagePosts: (state) => {
+    return state.homepagePosts;
+  },
+};

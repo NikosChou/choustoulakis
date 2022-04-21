@@ -10,7 +10,7 @@
           v-waypoint="{
             active: true,
             callback: onWaypoint,
-            options: intersectionOptions
+            options: intersectionOptions,
           }"
           :value="valueT"
           color="secondary"
@@ -27,7 +27,7 @@ export default {
   props: {
     icon: null,
     name: null,
-    value: null
+    value: null,
   },
   data() {
     return {
@@ -36,8 +36,8 @@ export default {
       intersectionOptions: {
         root: null,
         rootMargin: "0px 0px 0px 0px",
-        threshold: [0, 1]
-      }
+        threshold: [0, 1],
+      },
     };
   },
   methods: {
@@ -51,8 +51,8 @@ export default {
       if (this.valueT >= this.value) {
         clearInterval(this.id);
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

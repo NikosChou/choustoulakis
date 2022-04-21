@@ -21,11 +21,11 @@
 <script>
 export default {
   props: {
-    items: null
+    items: null,
   },
   data() {
     return {
-      selected: null
+      selected: null,
     };
   },
   methods: {
@@ -42,8 +42,8 @@ export default {
           this.selected = this.items[index];
         }
       }
-    }
-  }
+    },
+  },
 };
 </script>
 

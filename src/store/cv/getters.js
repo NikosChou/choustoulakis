@@ -1,5 +1,5 @@
 export default {
-  basics: state => {
+  basics: (state) => {
     return state.resume.basics;
   },
   fullName: (state, getters) => {
@@ -16,5 +16,5 @@ export default {
   },
   languages: (state, getters) => {
     return getters.languages;
-  }
-}
+  },
+};

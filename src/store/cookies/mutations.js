@@ -9,11 +9,11 @@ export default {
     }
     state.accepted = accepted;
     state.showCookies = false;
-    localStorage.setItem('cookies_accepted', accepted);
+    localStorage.setItem("cookies_accepted", accepted);
     if (accepted === true) {
       Vue.use(VueGtag, {
-        config: { id: "G-78WG4R0RQM" }
+        config: { id: "G-78WG4R0RQM" },
       });
     }
-  }
+  },
 };

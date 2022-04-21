@@ -1,5 +1,5 @@
 export default {
-    updateHomepagePosts: (state, homepagePosts) => {
-      state.homepagePosts = [...homepagePosts];
-    }
-  };
+  updateHomepagePosts: (state, homepagePosts) => {
+    state.homepagePosts = [...homepagePosts];
+  },
+};

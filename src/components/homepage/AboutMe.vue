@@ -17,8 +17,7 @@
         <div v-html="post.body"></div>
         <v-row justify="center" class="mt-10">
           <v-col cols="auto">
-            <v-btn large to="/cv" class="button" v-text="post.action">
-            </v-btn>
+            <v-btn large to="/cv" class="button" v-text="post.action"> </v-btn>
           </v-col>
         </v-row>
       </v-col>

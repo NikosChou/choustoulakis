@@ -1,5 +1,5 @@
 export default {
-  accepted: state => {
+  accepted: (state) => {
     return state.accepted;
-  }
+  },
 };

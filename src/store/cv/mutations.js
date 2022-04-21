@@ -3,13 +3,13 @@ export default {
     state.languages = data.languages;
   },
   updateProfileInfos: (state, data) => {
-    state.infos = data.infos
+    state.infos = data.infos;
   },
   updateProfileSocial: (state, data) => {
-    state.social = data.social
+    state.social = data.social;
   },
   updateProfileSummary: (state, data) => {
-    state.summary = data.summary
+    state.summary = data.summary;
   },
   updateSkills: (state, data) => {
     state.skills = data.skills;

@@ -5,5 +5,5 @@ export default {
   infos: [],
   social: [],
   summary: {},
-  educations: []
+  educations: [],
 };
