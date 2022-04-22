@@ -25,7 +25,7 @@
           :group="i.route"
           active-class="accent"
         >
-          <v-icon slot="prependIcon">{{ i.icon }}</v-icon>
+          <v-icon color="secondary" slot="prependIcon">{{ i.icon }}</v-icon>
           <template v-slot:activator>
             <v-list-item-content>
               <v-list-item-title class="text-uppercase">{{
