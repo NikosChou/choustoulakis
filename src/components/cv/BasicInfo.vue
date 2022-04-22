@@ -24,7 +24,7 @@
     </v-col>
     <v-col cols="12" sm="8" class="px-0">
       <v-card shaped>
-        <v-card-text class="info--text">
+        <v-card-text class="secondary--text">
           <v-row
             class="font-weight-black"
             v-for="(i, index) in infos"
@@ -33,9 +33,9 @@
             <v-col>
               <v-row>
                 <v-col cols="1">
-                  <v-icon color="secondary">{{ i.icon }}</v-icon>
+                  <v-icon color="primary">{{ i.icon }}</v-icon>
                 </v-col>
-                <v-col cols="11" class="info--text"
+                <v-col cols="11" class="secondary--text"
                   ><span v-if="i.href">
                     <a :href="i.href" class="text-link" target="blank">{{
                       i.text

@@ -75,13 +75,9 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 @import url("../node_modules/@fortawesome/fontawesome-free/css/solid.min.css");
 
-* {
-  font-display: block;
-}
-
 .router-view {
   z-index: 1;
-  background-color: #303030;
+  background: var(--v-background-base);
   box-shadow: 0 0 40px 0 rgb(0 0 0 / 10%);
 }
 

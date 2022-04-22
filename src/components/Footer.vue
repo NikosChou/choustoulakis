@@ -18,10 +18,10 @@
           </small>
         </v-col>
         <v-col cols="auto" class="">
-          <router-link class="white--text mr-3 text-link" to="/impressum">
+          <router-link class="secondary--text mr-3 text-link" to="/impressum">
             impressum
           </router-link>
-          <router-link class="white--text text-link" to="/privacy">
+          <router-link class="secondary--text text-link" to="/privacy">
             privacy
           </router-link>
           <v-btn

@@ -49,7 +49,7 @@ export default {
 
 <style lang="scss" scoped>
 .my-button {
-  color: var(--v-secondary-base);
+  color: var(--v-primary-base);
   transition: 0.3s;
 }
 .on-hover {

@@ -13,7 +13,7 @@
             options: intersectionOptions,
           }"
           :value="valueT"
-          color="secondary"
+          color="primary"
           height="25"
           reactive
         ></v-progress-linear>

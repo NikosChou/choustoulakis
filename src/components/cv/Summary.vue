@@ -7,7 +7,8 @@
     <template v-slot:right>
       <v-card shaped>
         <v-card-title v-html="summary.title"> </v-card-title>
-        <v-card-text class="info--text" v-html="summary.body"> </v-card-text>
+        <v-card-text class="secondary--text" v-html="summary.body">
+        </v-card-text>
       </v-card>
     </template>
   </BasicRow>

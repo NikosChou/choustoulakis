@@ -15,7 +15,7 @@
     <v-navigation-drawer app v-model="drawer">
       <v-list>
         <v-list-group
-          color="accent"
+          color="info"
           v-for="i in items"
           @click="
             $router.push(i.route);
@@ -39,15 +39,14 @@
             v-for="item in i.items"
             :key="item.title"
             link
-            active-class="red"
             @click="goto(item)"
           >
             <v-list-item-action class="pl-4">
-              <v-icon v-text="item.icon" color="secondary"></v-icon>
+              <v-icon v-text="item.icon" color="info lighten-1"></v-icon>
             </v-list-item-action>
             <v-list-item-title
               v-text="item.title"
-              class="secondary--text"
+              class="ingo--text lighten-1"
             ></v-list-item-title>
           </v-list-item>
         </v-list-group>

@@ -1,60 +1,64 @@
 <template>
   <v-container fluid class="full-page fill-height">
-    <v-row v-if="post" justify="center">
-      <v-col cols="12" class="d-flex justify-center">
-        <v-avatar size="15rem" class="elevation-10 img-avtr">
-          <v-img :src="post.image" position="down"> </v-img>
+    <v-container>
+      <v-row class="primary-info" v-if="post" justify="center">
+        <v-col cols="12" class="d-flex justify-center">
+          <v-avatar size="15rem" class="elevation-10 img-avtr">
+            <v-img :src="post.image" position="down"> </v-img>
 
-          <svg viewBox="0 0 500 500" class="curved-text">
-            <path
-              id="curve"
-              d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
-              fill="transparent"
-            />
-            <text width="500">
-              <textPath xlink:href="#curve" class="text">#OPENTOWORK</textPath>
-            </text>
-          </svg>
-        </v-avatar>
-      </v-col>
-      <v-col
-        cols="12"
-        class="d-flex justify-center py-0"
-        data-aos="fade-right"
-        data-aos-anchor-placement="top"
-      >
-        <h1 class="text-center">{{ post.title.split("-")[0] }} -</h1>
-      </v-col>
-      <v-col
-        cols="12"
-        class="d-flex justify-center py-0"
-        data-aos="fade-left"
-        data-aos-anchor-placement="top"
-      >
-        <h2 class="text-center">{{ post.title.split("-")[1] }}</h2>
-      </v-col>
-      <v-col cols="7">
-        <hr />
-      </v-col>
-      <v-col
-        cols="12"
-        md="6"
-        sm="7"
-        class="d-flex justify-center"
-        data-aos="fade-in"
-        data-aos-anchor-placement="top"
-      >
-        <p class="text-center rounded pa-5" v-html="post.body"></p>
-      </v-col>
-      <v-col
-        cols="12"
-        class="d-flex justify-center"
-        data-aos="fade-in"
-        data-aos-anchor-placement="top"
-      >
-        <v-btn large to="/cv" color="accent" v-text="post.action"></v-btn>
-      </v-col>
-    </v-row>
+            <svg viewBox="0 0 500 500" class="curved-text">
+              <path
+                id="curve"
+                d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
+                fill="transparent"
+              />
+              <text width="500">
+                <textPath xlink:href="#curve" class="text">
+                  #OPENTOWORK
+                </textPath>
+              </text>
+            </svg>
+          </v-avatar>
+        </v-col>
+        <v-col
+          cols="12"
+          class="d-flex justify-center py-0"
+          data-aos="fade-right"
+          data-aos-anchor-placement="top"
+        >
+          <h1 class="text-center">{{ post.title.split("-")[0] }} -</h1>
+        </v-col>
+        <v-col
+          cols="12"
+          class="d-flex justify-center py-0"
+          data-aos="fade-left"
+          data-aos-anchor-placement="top"
+        >
+          <h2 class="text-center">{{ post.title.split("-")[1] }}</h2>
+        </v-col>
+        <v-col cols="7">
+          <hr />
+        </v-col>
+        <v-col
+          cols="12"
+          md="6"
+          sm="7"
+          class="d-flex justify-center"
+          data-aos="fade-in"
+          data-aos-anchor-placement="top"
+        >
+          <p class="text-center rounded pa-5" v-html="post.body"></p>
+        </v-col>
+        <v-col
+          cols="12"
+          class="d-flex justify-center"
+          data-aos="fade-in"
+          data-aos-anchor-placement="top"
+        >
+          <v-btn large to="/cv" color="accent" v-text="post.action"></v-btn>
+        </v-col>
+      </v-row>
+    </v-container>
     <v-row class="shape-fill">
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +89,7 @@ export default {
   position: absolute;
   font-size: 3em;
   .text {
-    fill: var(--v-primary-base);
+    fill: var(--v-accent-base);
     font-weight: 900;
   }
 }
@@ -123,6 +127,7 @@ export default {
     font-family: "Dancing Script";
     font-size: 3.7rem;
     font-weight: bold;
+    color: var(--v-info-base);
     text-shadow: -1px 0px 1px rgb(0 0 0 / 30%);
   }
   h2 {
@@ -131,16 +136,16 @@ export default {
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: var(--v-primary-base);
+    color: var(--v-info-lighten1);
     text-shadow: -1px 0px 1px rgb(0 0 0 / 30%);
   }
   p {
-    text-shadow: -1px 1px 1px #00000073;
-    box-shadow: inset 0 0 27px 15px #00000030, 0 0 9px 5px #00000030;
     font-family: "Open Sans";
     padding: 0 2rem;
-    background: #0000003b;
+    opacity: 0.8;
+    color: var(--v-secondary-base);
     font-weight: bold;
+    background: var(--v-background-base);
   }
 
   button {
@@ -170,9 +175,7 @@ export default {
       position: relative;
       left: 50%;
       transform: translateX(-50%);
-      path {
-        fill: #303030;
-      }
+      fill: var(--v-background-base);
     }
   }
 }

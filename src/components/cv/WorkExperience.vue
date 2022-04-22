@@ -13,14 +13,16 @@
         data-aos="fade-up"
         data-aos-anchor-placement="top"
       >
-        <v-card-title class="job-title">
-          {{ job.title }}
+        <v-card-title class="job-title secondary--text">
+          <h3>{{ job.title }}</h3>
         </v-card-title>
-        <v-card-subtitle class="primary--text"
-          ><h4>{{ job.company }}</h4></v-card-subtitle
-        >
-        <v-card-subtitle class="primary--text">{{ job.time }}</v-card-subtitle>
-        <v-card-text class="info--text job-description">
+        <v-card-subtitle class="primary--text">
+          <h4>{{ job.company }}</h4>
+        </v-card-subtitle>
+        <v-card-subtitle class="primary--text text--darken-1">
+          <h5>{{ job.time }}</h5>
+        </v-card-subtitle>
+        <v-card-text class="secondary--text job-description">
           <div v-html="job.description"></div>
           <br />
           <div>
@@ -29,7 +31,7 @@
               :key="i"
               outlined
               small
-              color="secondary"
+              color="primary"
               class="mr-1 mb-1 text-uppercase"
               >{{ point }}</v-chip
             >

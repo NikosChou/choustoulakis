@@ -6,7 +6,7 @@
     }}</template>
     <template v-slot:right>
       <v-card shaped>
-        <v-card-text class="info--text">
+        <v-card-text class="secondary--text">
           <v-chip
             v-for="(i, index) in interests"
             :key="index"
