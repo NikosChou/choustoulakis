@@ -1,14 +1,11 @@
 <template>
   <v-app>
-    <v-app-bar
-      elevation="0"
-      app
-      clipped-left
-      color="transparent"
-      collapse-on-scroll
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title class="info--text"
+    <v-app-bar elevation="0" app color="transparent" collapse-on-scroll>
+      <v-app-bar-nav-icon
+        class="secondary--text"
+        @click.stop="drawer = !drawer"
+      ></v-app-bar-nav-icon>
+      <v-toolbar-title class="secondary--text"
         ><span>{{ $t("application.name") }}</span></v-toolbar-title
       >
     </v-app-bar>
@@ -26,6 +23,7 @@
           append-icon=""
           :disabled="i.route === $route.path"
           :group="i.route"
+          active-class="accent"
         >
           <v-icon slot="prependIcon">{{ i.icon }}</v-icon>
           <template v-slot:activator>
@@ -42,7 +40,7 @@
             @click="goto(item)"
           >
             <v-list-item-action class="pl-4">
-              <v-icon v-text="item.icon" color="info lighten-1"></v-icon>
+              <v-icon v-text="item.icon" color="accent"></v-icon>
             </v-list-item-action>
             <v-list-item-title
               v-text="item.title"
@@ -51,6 +49,13 @@
           </v-list-item>
         </v-list-group>
       </v-list>
+      <v-list-item>
+        <v-switch
+          v-model="$vuetify.theme.dark"
+          color="primary"
+          label="Dark mode"
+        ></v-switch>
+      </v-list-item>
     </v-navigation-drawer>
     <v-main class="pa-0">
       <slot></slot>

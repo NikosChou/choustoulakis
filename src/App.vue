@@ -8,7 +8,7 @@
       <router-view class="router-view"></router-view>
     </transition>
     <template v-slot:footer>
-      <Footer />
+      <Footer :packageVersion="packageVersion" />
     </template>
     <template v-slot:privacy>
       <PrivacyPolicy data-aos="fade-up" data-aos-delay="1000" />
@@ -23,14 +23,17 @@ import PrivacyPolicy from "@/components/PrivacyPolicy";
 import aos from "aos";
 import { createNamespacedHelpers } from "vuex";
 
-const { mapActions } = createNamespacedHelpers("cookies");
+const { mapActions, mapState } = createNamespacedHelpers("cookies");
 
 export default {
   name: "App",
-  beforeMount() {
-    this.$vuetify.theme.themes.dark = true;
-  },
   created() {
+    if (
+      window.matchMedia &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      this.$vuetify.theme.dark = true;
+    }
     this.refreshCookiesAnswer();
     aos.init({ duration: 1000 });
   },
@@ -62,6 +65,9 @@ export default {
           return "14px";
       }
     },
+    ...mapState({
+      packageVersion: (state) => state.packageVersion,
+    }),
   },
   methods: {
     ...mapActions(["refreshCookiesAnswer"]),

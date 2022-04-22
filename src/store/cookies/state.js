@@ -1,5 +1,5 @@
 export default {
   accepted: false,
   showCookies: true,
-  packageVersion: 1,
+  packageVersion: process.env.PACKAGE_VERSION || "1.0.0",
 };

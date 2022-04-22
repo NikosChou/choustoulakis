@@ -16,6 +16,7 @@
               fas fa-heart
             </v-icon>
           </small>
+          <span class="text-caption ml-1">v{{ packageVersion }}</span>
         </v-col>
         <v-col cols="auto" class="">
           <router-link class="secondary--text mr-3 text-link" to="/impressum">
@@ -38,6 +39,14 @@
     </v-container>
   </v-footer>
 </template>
+
+<script>
+export default {
+  props: {
+    packageVersion: String,
+  },
+};
+</script>
 
 <style lang="scss" scoped>
 .heart {

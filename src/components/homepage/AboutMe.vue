@@ -39,7 +39,7 @@ export default {
 
   h2 {
     font-size: 4rem;
-    color: var(--v-info-base);
+    color: var(--v-secondary-base);
     text-shadow: -1px 0px 1px rgb(255 255 255 / 40%);
     font-family: "Open Sans";
     text-transform: uppercase;
@@ -48,7 +48,7 @@ export default {
 
   h3 {
     font-size: 2rem;
-    color: var(--v-info-base);
+    color: var(--v-secondary-base);
     text-shadow: -1px 0px 1px rgb(255 255 255 / 40%);
     font-family: "Open Sans";
     text-transform: uppercase;

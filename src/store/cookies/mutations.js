@@ -3,7 +3,6 @@ import VueGtag from "vue-gtag";
 
 export default {
   accept: (state, accepted) => {
-    console.log(accepted);
     if (accepted === undefined || accepted === null) {
       return;
     }
