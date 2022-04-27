@@ -59,7 +59,7 @@ export default {
 
 <style lang="scss" scoped>
 .container-wrapper {
-  background: #212121;
+  background: var(--v-background-base);
   border-radius: 1rem;
   border-color: var(--v-primary-base);
   border: solid;
