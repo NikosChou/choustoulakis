@@ -5,7 +5,7 @@
 
       Nikolaos Choustoulakis <br />
       Softwareentwicklung<br />
-      Lohbuchweg 14<br />
+      Lohbruchweg 14<br />
       45699 Erkrath<br />
       <br />
       Kontakt<br />
