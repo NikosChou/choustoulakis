@@ -86,6 +86,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .curved-text {
+  display: none;
   position: absolute;
   font-size: 3em;
   .text {
