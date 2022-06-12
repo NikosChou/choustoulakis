@@ -52,6 +52,7 @@
         <v-col
           cols="12"
           class="d-flex justify-center"
+          style="z-index: 1"
           data-aos="fade-in"
           data-aos-anchor-placement="top"
         >
