@@ -75,11 +75,11 @@ export default {
 };
 </script>
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
-@import url("../node_modules/@fortawesome/fontawesome-free/css/solid.min.css");
+// @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+//@import url("../node_modules/@fortawesome/fontawesome-free/css/solid.min.css");
 
 .router-view {
   z-index: 1;
