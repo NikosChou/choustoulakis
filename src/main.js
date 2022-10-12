@@ -11,10 +11,10 @@ Vue.use(VueWaypoint);
 Vue.use(i18n);
 Vue.config.productionTip = false;
 
-new Vue({
-  router,
-  vuetify,
-  i18n,
-  store,
-  render: (h) => h(App),
-}).$mount("#app");
+// new Vue({
+//   router,
+//   vuetify,
+//   i18n,
+//   store,
+//   render: (h) => h(App),
+// }).$mount("#app");
