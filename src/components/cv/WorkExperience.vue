@@ -1,9 +1,9 @@
 <template>
   <BasicRow id="Workexperience">
     <template v-slot:icon>fas fa-brain</template>
-    <template v-slot:title>{{
-      $t("application.navigation.cv.item.experience")
-    }}</template>
+    <template v-slot:title>
+      {{ $t("application.navigation.cv.item.experience") }}
+    </template>
     <template v-slot:right>
       <v-card
         v-for="(job, index) in jobs"

@@ -3,36 +3,13 @@
     <v-row justify="center">
       <v-col cols="12" md="10" lg="7">
         <BasicInfo :infos="infos" :social="social" class="pa-3" />
-        <v-divider
-          class="primary"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top"
-        ></v-divider>
-        <Summary :summary="summary" class="pa-3" />
-        <v-divider
-          class="primary"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top"
-        ></v-divider>
-        <WorkExperience class="pa-3" :jobs="jobs" />
-        <v-divider
-          class="primary"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top"
-        ></v-divider>
-        <Education :items="educations" class="pa-3" />
-        <v-divider
-          class="primary"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top"
-        ></v-divider>
-        <Skills class="pa-3" :skills="skills" />
-        <v-divider
-          class="primary"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top"
-        ></v-divider>
-        <Languages class="pa-3" :languages="languages" />
+        <v-expansion-panels flat popout multiple>
+          <Summary :summary="summary" class="pa-3" />
+          <WorkExperience class="pa-3" :jobs="jobs" />
+          <Education :items="educations" class="pa-3" />
+          <Skills class="pa-3" :skills="skills" />
+          <Languages class="pa-3" :languages="languages" />
+        </v-expansion-panels>
       </v-col>
     </v-row>
   </v-container>

@@ -82,6 +82,7 @@ export default {
 //@import url("../node_modules/@fortawesome/fontawesome-free/css/solid.min.css");
 
 .router-view {
+  height: 100%;
   z-index: 1;
   background: var(--v-background-base);
   box-shadow: 0 0 40px 0 rgb(0 0 0 / 10%);
