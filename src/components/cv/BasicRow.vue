@@ -16,13 +16,7 @@
     </v-expansion-panel-header>
     <v-expansion-panel-content>
       <v-row justify="end">
-        <v-col
-          cols="12"
-          md="8"
-          class="px-0"
-          data-aos="fade-up"
-          data-aos-anchor-placement="top"
-        >
+        <v-col cols="12" md="8">
           <slot name="right"></slot>
         </v-col>
       </v-row>
@@ -31,12 +25,8 @@
 </template>
 
 <style lang="scss" scoped>
-.sticky {
-  position: sticky;
-  top: 4rem;
-}
 span {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   font-family: "Clicker Script";
 }
