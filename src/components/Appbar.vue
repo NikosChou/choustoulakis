@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar elevation="0" app color="transparent" collapse-on-scroll>
+    <v-app-bar elevation="0" app color="background" collapse-on-scroll>
       <v-app-bar-nav-icon
         class="secondary--text"
         @click.stop="drawer = !drawer"
@@ -57,7 +57,7 @@
         ></v-switch>
       </v-list-item>
     </v-navigation-drawer>
-    <v-main class="pa-0">
+    <v-main>
       <slot></slot>
     </v-main>
     <slot name="footer"></slot>
