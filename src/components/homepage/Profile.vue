@@ -4,7 +4,7 @@
       <v-row class="primary-info" v-if="post" justify="center">
         <v-col cols="12" class="d-flex justify-center">
           <v-avatar size="15rem" class="elevation-10 img-avtr">
-            <v-img :src="post.image" position="down"> </v-img>
+            <v-img src="/static/nikos.jpg" position="down"> </v-img>
 
             <svg viewBox="0 0 500 500" class="curved-text">
               <path
