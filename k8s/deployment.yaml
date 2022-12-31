@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: choustoulakis-website
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        deployment: choustoulakis-website
+    spec:
+      containers:
+        - name: choustoulakis-website-cont
+          imagePullPolicy: Always
+          image: public.ecr.aws/h7v4k5t3/choustoulakis-website:latest
+          ports:
+            - containerPort: 80

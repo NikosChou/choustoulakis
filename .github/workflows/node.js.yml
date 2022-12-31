@@ -1,0 +1,51 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Deploy CI
+
+on:
+  push:
+    branches: [master]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@master
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm run build
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+      - name: Login to Amazon ECR
+        run: aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/h7v4k5t3
+      - name: build image
+        run: docker build . -t choustoulakis-website
+      - name: tag image
+        run: docker tag choustoulakis-website:latest public.ecr.aws/h7v4k5t3/choustoulakis-website:$(git rev-parse --short "$GITHUB_SHA")
+      - name: push to ecr
+        run: docker push public.ecr.aws/h7v4k5t3/choustoulakis-website:$(git rev-parse --short "$GITHUB_SHA")
+
+  deploy:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: azure/setup-kubectl@v2.0
+      - name: Set k8sEnv
+        run: |
+          echo ${{ secrets.K8S }} | base64 -d > /tmp/kubeconf
+          export KUBECONFIG=/tmp/kubeconf
+          sed -i 's/latest/'$(git rev-parse --short "$GITHUB_SHA")'/g' k8s/deployment.yaml
+          kubectl -n choustoulakis apply -k k8s
+          kubectl -n choustoulakis rollout status -f k8s/deployment.yaml
+      - name: cleaning
+        run: |
+          rm -rf /tmp/kubeconf
+          rm -rf k8s/secrets
