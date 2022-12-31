@@ -1,26 +1,34 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: choustoulakis-website-ing
   annotations:
-    kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: "letsencrypt"
-spec:
+    cert-manager.io/cluster-issuer: letsencrypt
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+  name: choustoulakis-website-ing
   tls:
     - hosts:
-        - "choustoulakis.de"
-        - "www.choustoulakis.de"
+        - choustoulakis.de
+        - www.choustoulakis.de
       secretName: choustoulakis-website-tls
+spec:
   rules:
     - host: choustoulakis.de
       http: &http
         paths:
-          - path: /
-            pathType: Prefix
-            backend:
+          - backend:
               service:
                 name: choustoulakis-website-svc
                 port:
                   number: 80
+            path: /(.*)
+            pathType: Prefix
+          - backend:
+              service:
+                name: choustoulakis-cms-svc
+                port:
+                  number: 9000
+            path: /api/(.*)
+            pathType: Prefix
     - host: www.choustoulakis.de
       http: *http

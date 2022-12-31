@@ -4,7 +4,7 @@ metadata:
   name: choustoulakis-website-svc
 spec:
   selector:
-    deployment: choustoulakis-website-app
+    deployment: choustoulakis-website
   ports:
     - protocol: TCP
       port: 80
