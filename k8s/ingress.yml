@@ -6,12 +6,12 @@ metadata:
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/rewrite-target: /$1
   name: choustoulakis-website-ing
+spec:
   tls:
     - hosts:
         - choustoulakis.de
         - www.choustoulakis.de
       secretName: choustoulakis-website-tls
-spec:
   rules:
     - host: choustoulakis.de
       http: &http
