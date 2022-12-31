@@ -12,7 +12,7 @@ spec:
         - "www.choustoulakis.de"
       secretName: choustoulakis-website-tls
   rules:
-    - host: choustoulakis-website.de
+    - host: choustoulakis.de
       http: &http
         paths:
           - path: /
