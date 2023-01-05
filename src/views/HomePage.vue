@@ -8,12 +8,11 @@
 <script>
 import { createNamespacedHelpers } from "vuex";
 import Profile from "@/components/homepage/Profile";
-import AboutMe from "@/components/homepage/AboutMe";
 
 const { mapActions, mapState } = createNamespacedHelpers("homepage");
 
 export default {
-  components: { Profile, AboutMe },
+  components: { Profile },
   created() {
     this.refreshHomepagePosts();
   },
