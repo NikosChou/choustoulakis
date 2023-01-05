@@ -1,7 +1,6 @@
 <template>
   <v-container fluid class="pa-0">
     <Profile :post="profilePost" />
-    <AboutMe :post="aboutMePost" />
     <!-- <Services /> -->
   </v-container>
 </template>
@@ -24,9 +23,6 @@ export default {
     }),
     profilePost() {
       return this.posts.find((e) => e.reference === "homepage-1");
-    },
-    aboutMePost() {
-      return this.posts.find((e) => e.reference === "homepage-2");
     },
   },
   methods: {
