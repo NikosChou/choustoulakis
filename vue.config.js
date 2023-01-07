@@ -26,9 +26,10 @@ module.exports = {
   transpileDependencies: ["vuetify"],
   devServer: {
     proxy: {
-      "/api": {
-        target: "https://api.choustoulakis.de/",
+      "/api/": {
+        target: "http://localhost:8081/",
         logLevel: "debug",
+        pathRewrite: { "^/api": "/" }
       },
     },
   },

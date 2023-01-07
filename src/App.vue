@@ -81,6 +81,11 @@ export default {
 // @import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
 //@import url("../node_modules/@fortawesome/fontawesome-free/css/solid.min.css");
 
+.v-application--wrap,
+body {
+  background: var(--v-background-base);
+}
+
 .router-view {
   min-height: 100%;
   z-index: 1;
@@ -99,7 +104,7 @@ a.text-link {
   transition: background-size 0.3s;
 
   &::after {
-    content: "\F061";
+    content: "\f061";
     opacity: 0;
     position: absolute;
     transform: translateX(-10px);
@@ -115,7 +120,7 @@ a.text-link {
   &:hover {
     animation: hover 0.5s ease-out forwards;
     &::after {
-      transform: translateX(0px);
+      transform: translateX(5px);
       opacity: 1;
     }
   }

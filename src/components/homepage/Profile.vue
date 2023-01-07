@@ -1,73 +1,60 @@
 <template>
-  <v-container fluid class="full-page fill-height">
-    <v-container>
-      <v-row class="primary-info" v-if="post" justify="center">
-        <v-col cols="12" class="d-flex justify-center">
-          <v-avatar size="15rem" class="elevation-10 img-avtr">
-            <v-img src="/static/nikos.jpg" position="down"> </v-img>
+  <v-container fluid class="full-page">
+    <v-row class="primary-info" v-if="post" justify="center">
+      <v-col cols="12" class="d-flex justify-center">
+        <v-avatar size="15rem" class="elevation-10 img-avtr">
+          <v-img src="/static/nikos.jpg" position="down"> </v-img>
 
-            <svg viewBox="0 0 500 500" class="curved-text">
-              <path
-                id="curve"
-                d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
-                fill="transparent"
-              />
-              <text width="500">
-                <textPath xlink:href="#curve" class="text">
-                  #OPENTOWORK
-                </textPath>
-              </text>
-            </svg>
-          </v-avatar>
-        </v-col>
-        <v-col
-          cols="12"
-          class="d-flex justify-center py-0"
-          data-aos="fade-right"
-          data-aos-anchor-placement="top"
-        >
-          <h1 class="text-center">{{ post.title.split("-")[0] }} -</h1>
-        </v-col>
-        <v-col
-          cols="12"
-          class="d-flex justify-center py-0"
-          data-aos="fade-left"
-          data-aos-anchor-placement="top"
-        >
-          <h2 class="text-center">{{ post.title.split("-")[1] }}</h2>
-        </v-col>
-        <v-col cols="7">
-          <hr />
-        </v-col>
-        <v-col
-          cols="12"
-          md="6"
-          sm="7"
-          class="d-flex justify-center"
-          data-aos="fade-in"
-          data-aos-anchor-placement="top"
-        >
-          <p class="text-center rounded pa-5" v-html="post.body"></p>
-        </v-col>
-        <v-col
-          cols="12"
-          class="d-flex justify-center"
-          style="z-index: 1"
-          data-aos="fade-in"
-          data-aos-anchor-placement="top"
-        >
-          <v-btn large to="/cv" color="accent" v-text="post.action"></v-btn>
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-row class="shape-fill">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1000 100"
-        preserveAspectRatio="none"
+          <svg viewBox="0 0 500 500" class="curved-text">
+            <path
+              id="curve"
+              d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97"
+              fill="transparent"
+            />
+            <text width="500">
+              <textPath xlink:href="#curve" class="text">#OPENTOWORK</textPath>
+            </text>
+          </svg>
+        </v-avatar>
+      </v-col>
+      <v-col
+        cols="12"
+        class="d-flex justify-center py-0"
+        data-aos="fade-right"
+        data-aos-anchor-placement="top"
       >
-        <path d="M500,98.9L0,6.1V0h1000v6.1L500,98.9z"></path>
-      </svg>
+        <h1 class="text-center">{{ post.title.split("-")[0] }} -</h1>
+      </v-col>
+      <v-col
+        cols="12"
+        class="d-flex justify-center py-0"
+        data-aos="fade-left"
+        data-aos-anchor-placement="top"
+      >
+        <h2 class="text-center">{{ post.title.split("-")[1] }}</h2>
+      </v-col>
+      <v-col cols="7">
+        <hr />
+      </v-col>
+      <v-col
+        cols="12"
+        md="6"
+        sm="7"
+        class="d-flex justify-center"
+        data-aos="fade-in"
+        data-aos-anchor-placement="top"
+      >
+        <p class="text-center rounded pa-5" v-html="post.body"></p>
+      </v-col>
+      <v-col
+        cols="12"
+        class="d-flex justify-center"
+        style="z-index: 1"
+        data-aos="fade-in"
+        data-aos-anchor-placement="top"
+      >
+        <v-btn large to="/cv" color="accent" v-text="post.action"></v-btn>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -96,13 +83,15 @@ export default {
   }
 }
 .full-page {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   background-image: url("~@/assets/IMG_9082-Pano.jpg");
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
 
   .img-avtr {
     filter: saturate(1);

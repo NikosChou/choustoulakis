@@ -1,15 +1,16 @@
 <template>
   <v-app>
-    <v-app-bar elevation="0" app color="background" collapse-on-scroll>
-      <v-app-bar-nav-icon
-        class="secondary--text"
-        @click.stop="drawer = !drawer"
-      ></v-app-bar-nav-icon>
-      <v-toolbar-title class="secondary--text"
-        ><span>{{ $t("application.name") }}</span></v-toolbar-title
-      >
-    </v-app-bar>
-    <v-navigation-drawer app v-model="drawer">
+    <v-btn
+      fixed
+      fab
+      class="mt-4"
+      left
+      elevation="0"
+      color="transparent"
+      @click.stop="drawer = !drawer"
+      ><v-icon color="secondary">fas fa-bars</v-icon></v-btn
+    >
+    <v-navigation-drawer app v-model="drawer" temporary>
       <v-list>
         <v-list-group
           color="info"
