@@ -23,12 +23,5 @@ spec:
                   number: 80
             path: /(.*)
             pathType: Prefix
-          - backend:
-              service:
-                name: choustoulakis-cms-svc
-                port:
-                  number: 9000
-            path: /api/(.*)
-            pathType: Prefix
     - host: www.choustoulakis.de
       http: *http
