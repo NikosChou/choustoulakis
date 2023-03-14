@@ -77,6 +77,10 @@ export default {
 <style lang="scss">
 @import url("../node_modules/@fortawesome/fontawesome-free/css/solid.min.css");
 
+* {
+  word-break: keep-all !important;
+}
+
 .v-application--wrap,
 body {
   background: var(--v-background-base);
