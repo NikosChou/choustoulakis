@@ -9,8 +9,7 @@
           fab
           outlined
           target="_blank"
-          :href="s.href"
-        >
+          :href="s.href">
           <v-icon>{{ s.icon }}</v-icon>
         </v-btn>
       </v-hover>
