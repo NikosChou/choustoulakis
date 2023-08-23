@@ -5,11 +5,8 @@
 
       Nikolaos Choustoulakis <br />
       Softwareentwicklung<br />
-      Lohbruchweg 14<br />
-      45699 Erkrath<br />
       <br />
       Kontakt<br />
-      Telefon: 01607279057<br />
       E-Mail: nikolaos@choustoulakis.de<br />
       <br />
       Redaktionell Verantwortlicher<br />
