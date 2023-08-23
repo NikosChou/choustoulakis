@@ -9,17 +9,6 @@
         <v-col cols="12" class="d-flex justify-center">
           <SliderChip :items="social" />
         </v-col>
-        <v-col cols="12" class="d-flex justify-center">
-          <v-btn
-            link
-            href="/api/static/choustoulakis_cv.pdf"
-            download
-            outlined
-            color="primary"
-          >
-            Download CV
-          </v-btn>
-        </v-col>
       </v-row>
     </v-col>
     <v-col cols="12" sm="8">
@@ -28,8 +17,7 @@
           <v-row
             class="font-weight-black"
             v-for="(i, index) in infos"
-            :key="index"
-          >
+            :key="index">
             <v-col>
               <v-row>
                 <v-col cols="1">
