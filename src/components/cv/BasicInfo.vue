@@ -41,6 +41,7 @@
 
 <script>
 import SliderChip from "@/components/SliderChip";
+
 export default {
   components: {
     SliderChip,
